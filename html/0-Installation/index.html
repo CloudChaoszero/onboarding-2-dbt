@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>1. Installation &#8212; Analytic Engineering &amp; dbt: 0-100</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Creating a Project" href="../1-Create-A-Project/index.html" />
+    <link rel="prev" title="Analytic Engineering &amp; dbt: 0-100" href="../README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Analytic Engineering & dbt: 0-100</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Analytic Engineering &amp; dbt: 0-100
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Installation
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Installation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating a Project
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1-Create-A-Project/index.html">
+   1. Creating a Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Base/Raw Extraction
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-I-Source-Config/index.html">
+   1. Source Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-II-Instantiate-Base-Tables/index.html">
+   2. Instantiate your Base Tables!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-III-Materialization-Development/index.html">
+   3. Development in BASE
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Staging Transformations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3-Model-Stage-Tables/index.html">
+   Get up to the Stage
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mart Reporting
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html">
+   1. What are the Facts?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#dimension-and-fact-tables">
+   2. Dimension and Fact Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#embedding-business-logic">
+   3. Embedding Business Logic
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Documentation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5-Documentation/index.html">
+   1. Documention
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Additional Content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6-Advanced-Tests/index.html">
+   1. Testing, Testing…
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7-Advanced-Templates/index.html">
+   2. Templating &amp; Macros
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Next Steps
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Thank-You/index.html">
+   1. Next Steps!
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/0-Installation/index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse/issues/new?title=Issue%20on%20page%20%2F0-Installation/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminal-installation">
+   1.1. Terminal Installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verify-installation">
+   1.2. Verify Installation
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="installation">
+<h1>1. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="terminal-installation">
+<h2>1.1. Terminal Installation<a class="headerlink" href="#terminal-installation" title="Permalink to this headline">¶</a></h2>
+<p>In your <a class="reference external" href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.">Terminal prompt</a>, enter the following commands, in order</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name dbtcourse
+python -m ipykernel install --user --name dbtcourse --display-name <span class="s2">&quot;Python (dbt Course)&quot;</span>
+pip install --upgrade <span class="nv">dbt</span><span class="o">==</span><span class="m">0</span>.17.0
+</pre></div>
+</div>
+<p>The above does the following:</p>
+<ol class="simple">
+<li><p>Setting up the Conda environment “dbtcourse”</p></li>
+<li><p>Creating a new kernel called “dbtcourse” for our Jupyter Notebooks</p></li>
+<li><p>installing dbt version 0.17.0. You can <a class="reference external" href="https://discourse.getdbt.com/t/release-dbt-v0-17-0/1248">find out more about this verison here</a>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install --upgrade <span class="nv">dbt</span><span class="o">==</span><span class="m">0</span>.17.0
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already up-to-date: dbt==0.17.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (0.17.0)
+Requirement already satisfied, skipping upgrade: dbt-snowflake==0.17.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt==0.17.0) (0.17.0)
+Requirement already satisfied, skipping upgrade: dbt-postgres==0.17.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt==0.17.0) (0.17.0)
+Requirement already satisfied, skipping upgrade: dbt-core==0.17.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt==0.17.0) (0.17.0)
+Requirement already satisfied, skipping upgrade: dbt-bigquery==0.17.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt==0.17.0) (0.17.0)
+Requirement already satisfied, skipping upgrade: dbt-redshift==0.17.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt==0.17.0) (0.17.0)
+Requirement already satisfied, skipping upgrade: cryptography&lt;3,&gt;=2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (2.6.1)
+Requirement already satisfied, skipping upgrade: urllib3&lt;1.26.0,&gt;=1.20 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (1.24.3)
+Requirement already satisfied, skipping upgrade: snowflake-connector-python==2.2.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (2.2.1)
+Requirement already satisfied, skipping upgrade: azure-common&lt;2.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (1.1.25)
+Requirement already satisfied, skipping upgrade: azure-storage-blob&lt;12.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (2.1.0)
+Requirement already satisfied, skipping upgrade: psycopg2-binary~=2.8 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-postgres==0.17.0-&gt;dbt==0.17.0) (2.8.6)
+Requirement already satisfied, skipping upgrade: networkx&lt;3,&gt;=2.3 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (2.5)
+Requirement already satisfied, skipping upgrade: PyYAML&gt;=3.11 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (5.1)
+Requirement already satisfied, skipping upgrade: idna&lt;2.9 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (2.8)
+Requirement already satisfied, skipping upgrade: agate&lt;2,&gt;=1.6 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (1.6.1)
+Requirement already satisfied, skipping upgrade: requests&lt;2.23.0,&gt;=2.18.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (2.21.0)
+Requirement already satisfied, skipping upgrade: sqlparse&lt;0.4,&gt;=0.2.3 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (0.3.1)
+Requirement already satisfied, skipping upgrade: json-rpc&lt;2,&gt;=1.12 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (1.13.0)
+Requirement already satisfied, skipping upgrade: Jinja2==2.11.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (2.11.2)
+Requirement already satisfied, skipping upgrade: colorama&lt;0.5,&gt;=0.3.9 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (0.4.1)
+Requirement already satisfied, skipping upgrade: isodate&lt;0.7,&gt;=0.6 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (0.6.0)
+Requirement already satisfied, skipping upgrade: hologram==0.0.7 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (0.0.7)
+Requirement already satisfied, skipping upgrade: logbook&lt;1.6,&gt;=1.5 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (1.5.3)
+Requirement already satisfied, skipping upgrade: werkzeug&lt;0.17,&gt;=0.15 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (0.16.1)
+Requirement already satisfied, skipping upgrade: typing-extensions&lt;3.8,&gt;=3.7.4 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (3.7.4.3)
+Requirement already satisfied, skipping upgrade: cffi&lt;1.14,&gt;=1.9 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (1.12.2)
+Requirement already satisfied, skipping upgrade: minimal-snowplow-tracker==0.0.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-core==0.17.0-&gt;dbt==0.17.0) (0.0.2)
+Requirement already satisfied, skipping upgrade: google-api-core&lt;1.17.0,&gt;=1.16.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (1.16.0)
+Requirement already satisfied, skipping upgrade: google-cloud-core&lt;1.4,&gt;=1.3.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (1.3.0)
+Requirement already satisfied, skipping upgrade: protobuf&lt;3.12,&gt;=3.6.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (3.11.3)
+Requirement already satisfied, skipping upgrade: google-cloud-bigquery&lt;1.25.0,&gt;=1.24.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (1.24.0)
+Requirement already satisfied, skipping upgrade: googleapis-common-protos&lt;1.7.0,&gt;=1.6.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (1.6.0)
+Requirement already satisfied, skipping upgrade: six&gt;=1.14.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (1.15.0)
+Requirement already satisfied, skipping upgrade: boto3&lt;1.12,&gt;=1.4.4 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-redshift==0.17.0-&gt;dbt==0.17.0) (1.11.17)
+Requirement already satisfied, skipping upgrade: botocore&lt;1.15,&gt;=1.5.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from dbt-redshift==0.17.0-&gt;dbt==0.17.0) (1.14.17)
+Requirement already satisfied, skipping upgrade: asn1crypto&gt;=0.21.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from cryptography&lt;3,&gt;=2-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (1.4.0)
+Requirement already satisfied, skipping upgrade: pyjwt&lt;2.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from snowflake-connector-python==2.2.1-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (1.7.1)
+Requirement already satisfied, skipping upgrade: oscrypto&lt;2.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from snowflake-connector-python==2.2.1-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (1.2.1)
+Requirement already satisfied, skipping upgrade: certifi&lt;2021.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from snowflake-connector-python==2.2.1-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (2019.3.9)
+Requirement already satisfied, skipping upgrade: pytz&lt;2021.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from snowflake-connector-python==2.2.1-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (2018.9)
+Requirement already satisfied, skipping upgrade: pyOpenSSL&lt;21.0.0,&gt;=16.2.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from snowflake-connector-python==2.2.1-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (19.1.0)
+Requirement already satisfied, skipping upgrade: pycryptodomex!=3.5.0,&lt;4.0.0,&gt;=3.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from snowflake-connector-python==2.2.1-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (3.9.8)
+Requirement already satisfied, skipping upgrade: ijson&lt;3.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from snowflake-connector-python==2.2.1-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (2.6.1)
+Requirement already satisfied, skipping upgrade: azure-storage-common~=2.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from azure-storage-blob&lt;12.0.0-&gt;dbt-snowflake==0.17.0-&gt;dbt==0.17.0) (2.1.0)
+Requirement already satisfied, skipping upgrade: decorator&gt;=4.3.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from networkx&lt;3,&gt;=2.3-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (4.4.0)
+Requirement already satisfied, skipping upgrade: pytimeparse&gt;=1.1.5 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from agate&lt;2,&gt;=1.6-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (1.1.8)
+Requirement already satisfied, skipping upgrade: Babel&gt;=2.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from agate&lt;2,&gt;=1.6-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (2.6.0)
+Requirement already satisfied, skipping upgrade: parsedatetime&gt;=2.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from agate&lt;2,&gt;=1.6-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (2.6)
+Requirement already satisfied, skipping upgrade: python-slugify&gt;=1.2.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from agate&lt;2,&gt;=1.6-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (3.0.0)
+Requirement already satisfied, skipping upgrade: leather&gt;=0.3.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from agate&lt;2,&gt;=1.6-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (0.3.3)
+Requirement already satisfied, skipping upgrade: chardet&lt;3.1.0,&gt;=3.0.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from requests&lt;2.23.0,&gt;=2.18.0-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (3.0.4)
+Requirement already satisfied, skipping upgrade: MarkupSafe&gt;=0.23 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from Jinja2==2.11.2-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (1.1.1)
+Requirement already satisfied, skipping upgrade: jsonschema&lt;3.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from hologram==0.0.7-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (3.0.1)
+Requirement already satisfied, skipping upgrade: python-dateutil&lt;2.9,&gt;=2.8 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from hologram==0.0.7-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (2.8.0)
+Requirement already satisfied, skipping upgrade: pycparser in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from cffi&lt;1.14,&gt;=1.9-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (2.19)
+Requirement already satisfied, skipping upgrade: setuptools&gt;=34.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from google-api-core&lt;1.17.0,&gt;=1.16.0-&gt;dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (40.6.2)
+Requirement already satisfied, skipping upgrade: google-auth&lt;2.0dev,&gt;=0.4.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from google-api-core&lt;1.17.0,&gt;=1.16.0-&gt;dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (1.21.1)
+Requirement already satisfied, skipping upgrade: google-resumable-media&lt;0.6dev,&gt;=0.5.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from google-cloud-bigquery&lt;1.25.0,&gt;=1.24.0-&gt;dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (0.5.1)
+Requirement already satisfied, skipping upgrade: jmespath&lt;1.0.0,&gt;=0.7.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from boto3&lt;1.12,&gt;=1.4.4-&gt;dbt-redshift==0.17.0-&gt;dbt==0.17.0) (0.10.0)
+Requirement already satisfied, skipping upgrade: s3transfer&lt;0.4.0,&gt;=0.3.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from boto3&lt;1.12,&gt;=1.4.4-&gt;dbt-redshift==0.17.0-&gt;dbt==0.17.0) (0.3.3)
+Requirement already satisfied, skipping upgrade: docutils&lt;0.16,&gt;=0.10 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from botocore&lt;1.15,&gt;=1.5.0-&gt;dbt-redshift==0.17.0-&gt;dbt==0.17.0) (0.15.2)
+Requirement already satisfied, skipping upgrade: text-unidecode==1.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from python-slugify&gt;=1.2.1-&gt;agate&lt;2,&gt;=1.6-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (1.2)
+Requirement already satisfied, skipping upgrade: pyrsistent&gt;=0.14.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from jsonschema&lt;3.2-&gt;hologram==0.0.7-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (0.14.11)
+Requirement already satisfied, skipping upgrade: attrs&gt;=17.4.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from jsonschema&lt;3.2-&gt;hologram==0.0.7-&gt;dbt-core==0.17.0-&gt;dbt==0.17.0) (19.1.0)
+Requirement already satisfied, skipping upgrade: pyasn1-modules&gt;=0.2.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from google-auth&lt;2.0dev,&gt;=0.4.0-&gt;google-api-core&lt;1.17.0,&gt;=1.16.0-&gt;dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (0.2.8)
+Requirement already satisfied, skipping upgrade: cachetools&lt;5.0,&gt;=2.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from google-auth&lt;2.0dev,&gt;=0.4.0-&gt;google-api-core&lt;1.17.0,&gt;=1.16.0-&gt;dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (4.1.1)
+Requirement already satisfied, skipping upgrade: rsa&lt;5,&gt;=3.1.4; python_version &gt;= &quot;3.5&quot; in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from google-auth&lt;2.0dev,&gt;=0.4.0-&gt;google-api-core&lt;1.17.0,&gt;=1.16.0-&gt;dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (4.6)
+Requirement already satisfied, skipping upgrade: pyasn1&lt;0.5.0,&gt;=0.4.6 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;2.0dev,&gt;=0.4.0-&gt;google-api-core&lt;1.17.0,&gt;=1.16.0-&gt;dbt-bigquery==0.17.0-&gt;dbt==0.17.0) (0.4.8)
+<span class=" -Color -Color-Yellow">You are using pip version 19.0.3, however version 20.2.3 is available.</span>
+<span class=" -Color -Color-Yellow">You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Example" src="https://media.giphy.com/media/gIHEKKhW1g4AugVuiW/giphy.gif" /></p>
+</div>
+<div class="section" id="verify-installation">
+<h2>1.2. Verify Installation<a class="headerlink" href="#verify-installation" title="Permalink to this headline">¶</a></h2>
+<p>Let’s see if the installation worked, below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>dbt --version
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>installed version: 0.17.0
+   latest version: 0.18.0
+
+Your version of dbt is out of date! You can find instructions for upgrading here:
+https://docs.getdbt.com/docs/installation
+
+Plugins:
+  - bigquery: 0.17.0
+  - snowflake: 0.17.0
+  - redshift: 0.17.0
+  - postgres: 0.17.0
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>dbt --help
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>usage: dbt [-h] [--version] [-r RECORD_TIMING_INFO] [-d]
+           [--log-format {text,json,default}] [--no-write-json] [-S]
+           [--warn-error] [--partial-parse | --no-partial-parse]
+           {docs,source,init,clean,debug,deps,list,ls,snapshot,rpc,run,compile,test,seed,run-operation}
+           ...
+
+An ELT tool for managing your SQL transformations and data models. For more
+documentation on these commands, visit: docs.getdbt.com
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             Show version information
+  -r RECORD_TIMING_INFO, --record-timing-info RECORD_TIMING_INFO
+                        When this option is passed, dbt will output low-level
+                        timing stats to the specified file. Example:
+                        `--record-timing-info output.profile`
+  -d, --debug           Display debug logging during dbt execution. Useful for
+                        debugging and making bug reports.
+  --log-format {text,json,default}
+                        Specify the log format, overriding the command&#39;s
+                        default.
+  --no-write-json       If set, skip writing the manifest and run_results.json
+                        files to disk
+  -S, --strict          Run schema validations at runtime. This will surface
+                        bugs in dbt, but may incur a performance penalty.
+  --warn-error          If dbt would normally warn, instead raise an
+                        exception. Examples include --models that selects
+                        nothing, deprecations, configurations with no
+                        associated models, invalid test configurations, and
+                        missing sources/refs in tests.
+  --partial-parse       Allow for partial parsing by looking for and writing
+                        to a pickle file in the target directory. This
+                        overrides the user configuration file. WARNING: This
+                        can result in unexpected behavior if you use
+                        env_var()!
+  --no-partial-parse    Disallow partial parsing. This overrides the user
+                        configuration file.
+
+Available sub-commands:
+  {docs,source,init,clean,debug,deps,list,ls,snapshot,rpc,run,compile,test,seed,run-operation}
+    docs                Generate or serve the documentation website for your
+                        project.
+    source              Manage your project&#39;s sources
+    init                Initialize a new DBT project.
+    clean               Delete all folders in the clean-targets list (usually
+                        the dbt_modules and target directories.)
+    debug               Show some helpful information about dbt for debugging.
+                        Not to be confused with the --debug option which
+                        increases verbosity.
+    deps                Pull the most recent version of the dependencies
+                        listed in packages.yml
+    list (ls)           List the resources in your project
+    snapshot            Execute snapshots defined in your project
+    rpc                 Start a json-rpc server
+    run                 Compile SQL and execute against the current target
+                        database.
+    compile             Generates executable SQL from source, model, test, and
+                        analysis files. Compiled SQL files are written to the
+                        target/ directory.
+    test                Runs tests on data in deployed models. Run this after
+                        `dbt run`
+    seed                Load data from csv files into your data warehouse.
+    run-operation       Run the named macro with any supplied arguments.
+
+Specify one of these sub-commands and you can find more help from there.
+
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="dbt installation - part 2" src="https://media.giphy.com/media/ThvRceXAKeUxzutyqG/giphy.gif" /></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "dbtcourse"
+        },
+        kernelOptions: {
+            kernelName: "dbtcourse",
+            path: "./0-Installation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'dbtcourse'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">Analytic Engineering &amp; dbt: 0-100</a>
+    <a class='right-next' id="next-link" href="../1-Create-A-Project/index.html" title="next page">1. Creating a Project</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raul Maldonado<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
