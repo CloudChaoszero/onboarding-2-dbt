@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>1. Creating a Project &#8212; Analytic Engineering &amp; dbt: 0-100</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Source Configuration" href="../2-I-Source-Config/index.html" />
+    <link rel="prev" title="1. Installation" href="../0-Installation/index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Analytic Engineering & dbt: 0-100</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Analytic Engineering &amp; dbt: 0-100
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Installation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0-Installation/index.html">
+   1. Installation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating a Project
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Creating a Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Base/Raw Extraction
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-I-Source-Config/index.html">
+   1. Source Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-II-Instantiate-Base-Tables/index.html">
+   2. Instantiate your Base Tables!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-III-Materialization-Development/index.html">
+   3. Development in BASE
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Staging Transformations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3-Model-Stage-Tables/index.html">
+   Get up to the Stage
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mart Reporting
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html">
+   1. What are the Facts?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#dimension-and-fact-tables">
+   2. Dimension and Fact Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#embedding-business-logic">
+   3. Embedding Business Logic
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Documentation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5-Documentation/index.html">
+   1. Documention
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Additional Content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6-Advanced-Tests/index.html">
+   1. Testing, Testing…
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7-Advanced-Templates/index.html">
+   2. Templating &amp; Macros
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Next Steps
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Thank-You/index.html">
+   1. Next Steps!
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/1-Create-A-Project/index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse/issues/new?title=Issue%20on%20page%20%2F1-Create-A-Project/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-repo">
+   1.1. Creating a Repo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-instantiating-with-an-adapter">
+     1.1.1. [Optional] Instantiating with an Adapter
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#credentials">
+   1.2. Credentials
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="creating-a-project">
+<h1>1. Creating a Project<a class="headerlink" href="#creating-a-project" title="Permalink to this headline">¶</a></h1>
+<p>The following will discuss:</p>
+<ul class="simple">
+<li><p>Creating a dbt project</p></li>
+<li><p>DataWarehouse Credentials</p></li>
+<li></li>
+</ul>
+<div class="section" id="creating-a-repo">
+<h2>1.1. Creating a Repo<a class="headerlink" href="#creating-a-repo" title="Permalink to this headline">¶</a></h2>
+<p>One can initialize the project through <a class="reference external" href="https://docs.getdbt.com/reference/commands/init">initializing a dbt project</a>, with respective configurations.</p>
+<p><img alt="dbt init" src="https://media.giphy.com/media/nEUDP7zUhcnJBXyruT/giphy.gif" /></p>
+<p>We see that we create a repository/folder with dbt configurations through the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt init <span class="o">{</span>project-name<span class="o">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>Think of it like a cookie cutter implementation to create standard dbt repo.</p>
+</div></blockquote>
+<div class="section" id="optional-instantiating-with-an-adapter">
+<h3>1.1.1. [Optional] Instantiating with an Adapter<a class="headerlink" href="#optional-instantiating-with-an-adapter" title="Permalink to this headline">¶</a></h3>
+<p>If you have dbt version 0.18+, then you can create a profile yml file in your directory, whilst creating the dbt repo.</p>
+<p>How?</p>
+<p>There is an option to add an <code class="docutils literal notranslate"><span class="pre">adapter</span></code> via the adapter flag, seen below</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt init <span class="o">{</span>project-name<span class="o">}</span> --adapter <span class="o">{</span>some adapter<span class="o">}</span>
+</pre></div>
+</div>
+<p>More information about adapters can be <a class="reference external" href="https://docs.getdbt.com/reference/commands/init/#adapter-specific-profile">found here</a></p>
+<p>But why is this file important?</p>
+</div>
+</div>
+<div class="section" id="credentials">
+<h2>1.2. Credentials<a class="headerlink" href="#credentials" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference external" href="https://docs.getdbt.com/reference/profiles.yml">profiles.yml file</a> for your dbt workflow is a configuration file for storing your particular credentials for executing dbt within your datawarehouse instances.</p>
+<blockquote>
+<div><p>dbt works as the <strong>transformation</strong> within your warehouse, and leverages said warehouse for such transformations.</p>
+</div></blockquote>
+<p>You can see if you have your profile by going to the following directory</p>
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>cd ~/.dbt
+</pre></div>
+</div>
+<p>After, enter <code class="docutils literal notranslate"><span class="pre">ls</span></code> to see if you have a <code class="docutils literal notranslate"><span class="pre">.profile.yml</span></code> file in there. If not, please create one.</p>
+<p>The following is an example profile for a Cloud Data Platform <a class="reference external" href="https://www.snowflake.com/">Snowflake</a> setup.</p>
+<p><img alt="dbt profiles path" src="https://media.giphy.com/media/VomiTTla0LfLrZdHf9/giphy.gif" /></p>
+<p>In it, you’ll find a default configuration path for a Redshift example, seen below.</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>
+# For more information on how to configure this file, please see:
+# https://docs.getdbt.com/docs/profile
+
+default:
+  outputs:
+    dev:
+      type: redshift
+      threads: 1
+      host: 127.0.0.1
+      port: 5439
+      user: alice
+      pass: pa55word
+      dbname: warehouse
+      schema: dbt_alice
+    prod:
+      type: redshift
+      threads: 1
+      host: 127.0.0.1
+      port: 5439
+      user: alice
+      pass: pa55word
+      dbname: warehouse
+      schema: analytics
+  target: dev
+                    
+</pre></div>
+</div>
+<p>Again, recall we will be working within snowflake. So, the <a class="reference external" href="https://docs.getdbt.com/reference/warehouse-profiles/snowflake-profile/">Snowflake configuration path</a> would like as such:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>customer-analytics-db:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: {Some cool account name}
+
+      # User/password auth
+      user: {Super rad username}
+      password: {3.1415926535897932384626433832795}
+
+      role: ROLENAME
+      database: DEMO_DB
+      warehouse: COMPUTE_WH
+      schema: dev_{ldap}
+      threads: 1
+      client_session_keep_alive: False
+    prod:
+      type: snowflake
+      account: {Some cool account name}
+
+      # User/password auth
+      user: {Super rad username}
+      password: {3.1415926535897932384626433832795}
+
+      role: ROLENAME
+      database: DEMO_DB
+      warehouse: COMPUTE_WH
+      schema: {official-database}
+      threads: 1
+      client_session_keep_alive: False
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "dbtcourse"
+        },
+        kernelOptions: {
+            kernelName: "dbtcourse",
+            path: "./1-Create-A-Project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'dbtcourse'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../0-Installation/index.html" title="previous page">1. Installation</a>
+    <a class='right-next' id="next-link" href="../2-I-Source-Config/index.html" title="next page">1. Source Configuration</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raul Maldonado<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
