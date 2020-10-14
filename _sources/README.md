@@ -8,12 +8,12 @@ This is a quick guide on how to get started and create your data models using db
 dbt is a Python-based packaged for managing `Transform`ations in the ELT (Extract, Load, Transform) lifecyle.
 
 You can find a quick slide deck on dbt from [my past Lighting Talk on dbt, here](https://raulingaverage.dev/Presentations/PyBayTalks/2020/dbt/Lighting-Talk-dbt#/).
-
+A video summary of this documentation can [be found here, on Youtube](https://www.youtube.com/watch?v=EkeYdYnJ6kM&list=PL83V3nc76mDrEfz1rRZ3L2fDYXDGm8yLk&index=1).
 To see the resulting documentation portal, head to [raulingaverage.dev/dbt-Docs-Tutorial-Portal/)](https://raulingaverage.dev/dbt-Docs-Tutorial-Portal/).
 
-* Tutorial: [dbtOfCourse](https://github.com/CloudChaoszero/dbtOfCourse)
+* Tutorial: [onboarding-2-dbt](https://github.com/CloudChaoszero/onboarding-2-dbt)
 * Code: [Github Repository](https://github.com/CloudChaoszero/customer-analytics)
-
+* Youtube Overview: [Analytics Engineering & dbt: 0-100 playlist](https://www.youtube.com/watch?v=EkeYdYnJ6kM&list=PL83V3nc76mDrEfz1rRZ3L2fDYXDGm8yLk&index=1)
 ## Donate
 
 If you would like to support this project, feel free to consider donating to one of the following:
@@ -50,3 +50,5 @@ python -m ipykernel install --user --name dbtcourse --display-name "Python (dbt 
 
 * [dbt Documentation](https://docs.getdbt.com/)
 * Tutorial [customer-analytics](https://github.com/CloudChaoszero/customer-analytics)
+
+![](https://media.giphy.com/media/QYkX9IMHthYn0Y3pcG/giphy.gif)
