@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Development in BASE &#8212; Analytic Engineering &amp; dbt: 0-100</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Get up to the Stage" href="../3-Model-Stage-Tables/index.html" />
+    <link rel="prev" title="2. Instantiate your Base Tables!" href="../2-II-Instantiate-Base-Tables/index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Analytic Engineering & dbt: 0-100</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Analytic Engineering &amp; dbt: 0-100
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Installation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0-Installation/index.html">
+   1. Installation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating a Project
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1-Create-A-Project/index.html">
+   1. Creating a Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Base/Raw Extraction
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-I-Source-Config/index.html">
+   1. Source Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-II-Instantiate-Base-Tables/index.html">
+   2. Instantiate your Base Tables!
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Development in BASE
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Staging Transformations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3-Model-Stage-Tables/index.html">
+   Get up to the Stage
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mart Reporting
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html">
+   1. What are the Facts?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#dimension-and-fact-tables">
+   2. Dimension and Fact Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#embedding-business-logic">
+   3. Embedding Business Logic
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Documentation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5-Documentation/index.html">
+   1. Documention
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Additional Content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6-Advanced-Tests/index.html">
+   1. Testing, Testing…
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7-Advanced-Templates/index.html">
+   2. Templating &amp; Macros
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Next Steps
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Thank-You/index.html">
+   1. Next Steps!
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/2-III-Materialization-Development/index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse/issues/new?title=Issue%20on%20page%20%2F2-III-Materialization-Development/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#base-tables-the-design">
+   3.1. Base Tables - The Design
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#base-tables-the-implementation">
+   3.2. Base Tables - The Implementation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicitly-defining-data-types">
+     3.2.1. Explicitly Defining Data Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-cleaning">
+     3.2.2. Data Cleaning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#column-renaming-optional">
+     3.2.3. Column Renaming [Optional]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#json-unpacking-snowflake-optional">
+     3.2.4. Json Unpacking [Snowflake, Optional]
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="development-in-base">
+<h1>3. Development in BASE<a class="headerlink" href="#development-in-base" title="Permalink to this headline">¶</a></h1>
+<p>You can find a video overview of this <a class="reference external" href="https://www.youtube.com/watch?v=zhCmr3Wb7w4&amp;list=PL83V3nc76mDrEfz1rRZ3L2fDYXDGm8yLk&amp;index=6">section here</a>.</p>
+<div class="section" id="base-tables-the-design">
+<h2>3.1. Base Tables - The Design<a class="headerlink" href="#base-tables-the-design" title="Permalink to this headline">¶</a></h2>
+<p>This section, I’ll be discussing some of the BASE layer implementations, in preparation of our data mart.</p>
+<p>However, what is a BASE layer?</p>
+<p>BASE layer is the intial landing area for our Data Warehours modeling procedure for our Data Nart. It’s the “raw” layer for ingesting data, in its own purity.</p>
+<p>For my own preferences and adoption of <a class="reference external" href="https://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimensional-modeling/">Kimball Methodology</a>, this layer includes the following implementations:</p>
+<ul class="simple">
+<li><p>Data Type (Explicity) Definitions</p></li>
+<li><p>Data Cleaning</p></li>
+<li><p>Column renaming [Optional, and can be in STAGE Layer]</p></li>
+<li><p>JSON Unpacking (Feature in Snowflake)</p></li>
+</ul>
+<p>Here’s a visual example, with a subsequent breakdown:</p>
+<p><img alt="" src="https://media.giphy.com/media/uQci5UWgVSjyRv5iFr/giphy.gif" /></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt run --models tag:website_info <span class="c1"># As well</span>
+dbt run --models tag:customer_info
+</pre></div>
+</div>
+<blockquote>
+<div><p>Tags are implemented in the raw_schema.yml file</p>
+</div></blockquote>
+</div>
+<div class="section" id="base-tables-the-implementation">
+<h2>3.2. Base Tables - The Implementation<a class="headerlink" href="#base-tables-the-implementation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="explicitly-defining-data-types">
+<h3>3.2.1. Explicitly Defining Data Types<a class="headerlink" href="#explicitly-defining-data-types" title="Permalink to this headline">¶</a></h3>
+<p>Depending how your first step of your ELT pipeline, Extraction process, you may have some displeasing storage inefficiencies that could affect either timing or costs in your data warehouse.</p>
+<p>For example, we use Python to push data through Snowflake custom API calls. This data push sends all field’s data types as <code class="docutils literal notranslate"><span class="pre">VARCHAR(XXXXXXXX)</span></code> in Snowflake.</p>
+<p>This can be detrimental in subsequent queries, transformations, or aggregations due to storage size allowed to the fields. With explicit data type conversions, we avoid these long term issues in our data warehouse.</p>
+<p>For example, the following does an explicit data type conversion to <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>, assuming columns are <code class="docutils literal notranslate"><span class="pre">VARCHAR(XXXXXXXX)</span></code> type.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>WITH source AS (
+    SELECT * FROM {{ source(&#39;customers&#39;, &#39;CATALOG_SALES&#39;)}}
+    LIMIT 10000 -- Limiting due to data limitation via Trial Account :(
+),
+
+-- Explicitly defining data types &amp; potential renaming
+data_type_rename_conversion AS (
+    
+    SELECT
+        CS_SOLD_DATE_SK::NUMBER AS CS_SOLD_DATE_SK,
+        CS_SOLD_TIME_SK::NUMBER AS CS_SOLD_TIME_SK, 
+        CS_SHIP_DATE_SK::NUMBER AS CS_SHIP_DATE_SK,
+        CS_BILL_CUSTOMER_SK::NUMBER AS CS_BILL_CUSTOMER_S
+...
+</pre></div>
+</div>
+<blockquote>
+<div><p>Note: Explicitly defining data types is also useful in <a class="reference external" href="https://docs.getdbt.com/docs/building-a-dbt-project/tests">tests around schemas</a>, which dbt conveniently offers.
+We’ll talk about that in a later section. :)</p>
+</div></blockquote>
+</div>
+<div class="section" id="data-cleaning">
+<h3>3.2.2. Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h3>
+<p>There are some cases where your data comes in improperly. In the BASE layer, you’d want to proceed with some data cleaning operations such as:</p>
+<ul class="simple">
+<li><p>Removing HTML characters</p></li>
+<li><p>Dealing with NAN, N/A, or Null values</p></li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CASE</span> <span class="n">WHENNNN</span> <span class="n">tho</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Defining Time Zones</p></li>
+<li><p>Language Translation</p></li>
+<li><p>and more!</p></li>
+</ul>
+<p>I do not have any defined examples in this example, but this is some items to acknowledge.</p>
+<blockquote>
+<div><p><strong>Reader whispers</strong>…Why?</p>
+</div></blockquote>
+<p>The above items could have impact into business reporting for aggregated calculations or summarizations</p>
+<blockquote>
+<div><p>E.g.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Tabular data with field descriptions</p></li>
+<li><p>Usage Events of when dates occurred</p></li>
+</ul>
+</div>
+<div class="section" id="column-renaming-optional">
+<h3>3.2.3. Column Renaming [Optional]<a class="headerlink" href="#column-renaming-optional" title="Permalink to this headline">¶</a></h3>
+<p>Imagine this, raw data landing into your data warehosue like this:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>mail</p></th>
+<th class="head"><p>label_0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1/1/1900</p></td>
+<td><p>fake.email&#64;aolo.com</p></td>
+<td><p>Impression</p></td>
+</tr>
+<tr class="row-odd"><td><p>1/1/1900</p></td>
+<td><p>real.email&#64;goog1e.com</p></td>
+<td><p>Click</p></td>
+</tr>
+</tbody>
+</table>
+<p>What does that all mean? What?</p>
+<blockquote>
+<div><p>What’s worse, what happens if you’re trying to create a Data Catalog around these fields? Visually, displeasing.</p>
+</div></blockquote>
+<p>Renaming our columns into human readable formats, or close to it, allows us to clearly understand what we are querying, and focus more on future objectives around that.</p>
+<p>With some clean up, does this look better?</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>event_date</p></th>
+<th class="head"><p>user_email</p></th>
+<th class="head"><p>event_action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1/1/1900</p></td>
+<td><p>fake.email&#64;aolo.com</p></td>
+<td><p>Impression</p></td>
+</tr>
+<tr class="row-odd"><td><p>1/1/1900</p></td>
+<td><p>real.email&#64;goog1e.com</p></td>
+<td><p>Click</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="json-unpacking-snowflake-optional">
+<h3>3.2.4. Json Unpacking [Snowflake, Optional]<a class="headerlink" href="#json-unpacking-snowflake-optional" title="Permalink to this headline">¶</a></h3>
+<p>Optionally, Snowflake has a cool feature to unpack JSON objects to tabular formats</p>
+<blockquote>
+<div><p>This is not a sponsorship for Snowflake, just something really cool I use.
+You can find out more about <a class="reference external" href="https://docs.snowflake.com/en/user-guide/querying-semistructured.html">JSON unpacking (Querying Semi-structured data) here</a>.</p>
+</div></blockquote>
+<p>With all that being said, and executing the aforementioned dbt commands……</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt run --models tag:website_info <span class="c1"># Materializing, as well</span>
+dbt run --models tag:customer_info
+</pre></div>
+</div>
+<p>we have our tables in our Data Warehouse! :D</p>
+<p><img alt="" src="https://media.giphy.com/media/TFiPa1dS3ZkHSqpq0H/giphy.gif" /></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "dbtcourse"
+        },
+        kernelOptions: {
+            kernelName: "dbtcourse",
+            path: "./2-III-Materialization-Development"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'dbtcourse'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../2-II-Instantiate-Base-Tables/index.html" title="previous page">2. Instantiate your Base Tables!</a>
+    <a class='right-next' id="next-link" href="../3-Model-Stage-Tables/index.html" title="next page">Get up to the Stage</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raul Maldonado<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>1. Documention &#8212; Analytic Engineering &amp; dbt: 0-100</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Testing, Testing…" href="../6-Advanced-Tests/index.html" />
+    <link rel="prev" title="1. What are the Facts?" href="../4-Model-Mart-Tables/index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Analytic Engineering & dbt: 0-100</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Analytic Engineering &amp; dbt: 0-100
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Installation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0-Installation/index.html">
+   1. Installation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating a Project
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1-Create-A-Project/index.html">
+   1. Creating a Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Base/Raw Extraction
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-I-Source-Config/index.html">
+   1. Source Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-II-Instantiate-Base-Tables/index.html">
+   2. Instantiate your Base Tables!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-III-Materialization-Development/index.html">
+   3. Development in BASE
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Staging Transformations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3-Model-Stage-Tables/index.html">
+   Get up to the Stage
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mart Reporting
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html">
+   1. What are the Facts?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#dimension-and-fact-tables">
+   2. Dimension and Fact Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4-Model-Mart-Tables/index.html#embedding-business-logic">
+   3. Embedding Business Logic
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Documentation
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Documention
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Additional Content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6-Advanced-Tests/index.html">
+   1. Testing, Testing…
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7-Advanced-Templates/index.html">
+   2. Templating &amp; Macros
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Next Steps
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Thank-You/index.html">
+   1. Next Steps!
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/5-Documentation/index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/CloudChaoszero/dbtOfCourse/issues/new?title=Issue%20on%20page%20%2F5-Documentation/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   1.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-metadata-w-yml-files">
+   1.2. Table Metadata w/.yml files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-overview-information">
+   1.3. Adding Overview information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-and-present-your-website">
+   1.4. Generate and Present your website
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misc">
+   1.5. Misc.
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="documention">
+<h1>1. Documention<a class="headerlink" href="#documention" title="Permalink to this headline">¶</a></h1>
+<p>You can find the video summary for this <a class="reference external" href="https://www.youtube.com/watch?v=wY_Jdk4c-wE&amp;list=PL83V3nc76mDrEfz1rRZ3L2fDYXDGm8yLk&amp;index=11&amp;t=0s">section here</a></p>
+<div class="section" id="overview">
+<h2>1.1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Good documentation helps yourself, your team, and business individuals to understand reporting datasets.</p>
+<p>Per dbt,
+“dbt provides a way to generate documentation for your dbt project and render it as a website. The documentation for your project includes:</p>
+<ul class="simple">
+<li><p>Information about your project: including model code, a DAG of your project, any tests you’ve added to a column, and more.</p></li>
+<li><p>Information about your data warehouse: including column data types, and table sizes. This information is generated by running queries against the information schema.” - <a class="reference external" href="https://docs.getdbt.com/docs/building-a-dbt-project/documentation#overview">source</a></p></li>
+</ul>
+<p>With all that being said, maybe this will convince you</p>
+<blockquote>
+<div><p>“Documentation is a love letter to your future self” - Damian Conway</p>
+</div></blockquote>
+<p>In the next steps, we will create our dbt documentation site, as seen in the following example:</p>
+<p><img alt="Example #0" src="https://media.giphy.com/media/lhsMtAYctCzkoRrjMC/giphy.gif" /></p>
+</div>
+<div class="section" id="table-metadata-w-yml-files">
+<h2>1.2. Table Metadata w/.yml files<a class="headerlink" href="#table-metadata-w-yml-files" title="Permalink to this headline">¶</a></h2>
+<p>First, we create a yml file <code class="docutils literal notranslate"><span class="pre">mart_schema.yml</span></code> to store our table metadata for our documentation.</p>
+<p><img alt="Example #1" src="https://media.giphy.com/media/wNdDUtRugSs22cpPOY/giphy.gif" /></p>
+<p>Here is a snippet of the file:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>version: 2
+
+models:
+    
+  - name: household_demographics_dim
+    columns:
+      - name: hd_demo_sk
+        description: &quot;Blah&quot;
+      - name: hd_income_band_sk
+        description: &quot;Blah&quot;
+      - name: hd_buy_potential
+        description: &quot;Blah&quot;
+      - name: hd_dep_count
+        description: &quot;Blah&quot;
+      - name: hd_dep_count
+        description: &quot;Blah&quot;
+      - name: hd_vehicle_count
+        description: &quot;Blah&quot;
+      - name: income_band_bound
+        description: &quot;Blah&quot;
+  - name: customers_dim
+    meta:
+      contains_pii: true
+</pre></div>
+</div>
+<blockquote>
+<div><p>Note: Additionally, one can add metadata, tests, or other attributes to our yml file configuration, as part of the great dbt features offered to analysts. You can find our more in <a class="reference external" href="https://docs.getdbt.com/docs/building-a-dbt-project/documentation#adding-descriptions-to-your-project">dbt’s resources</a>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="adding-overview-information">
+<h2>1.3. Adding Overview information<a class="headerlink" href="#adding-overview-information" title="Permalink to this headline">¶</a></h2>
+<p>Now, though we have our Metadata attributes for our specified tables, there is no necessary (welcoming) Overview in our table. To add such an overview for our materialized tables, we create a seperate markdown <code class="docutils literal notranslate"><span class="pre">.md</span></code> file to create our respective overviews.</p>
+<p>For example, let’s check out how to add an overview to table <code class="docutils literal notranslate"><span class="pre">catalog_sales_monthly_fct</span></code></p>
+<blockquote>
+<div><p>Note: It’s important to add Jinja template statements <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">%}</span></code> surrounding your documentation, in the markdown file</p>
+</div></blockquote>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>
+{% docs catalog_sales_monthly_fct %}
+
+# Catalog Sales (Monthly Totals)
+
+This table contains Catalog Sales events from our transactions source for Catalog Sales.
+
+......................
+
+{% enddocs %}
+
+</pre></div>
+</div>
+<p><img alt="" src="https://media.giphy.com/media/e00DOpgOBO9dFiFxJJ/giphy.gif" /></p>
+</div>
+<div class="section" id="generate-and-present-your-website">
+<h2>1.4. Generate and Present your website<a class="headerlink" href="#generate-and-present-your-website" title="Permalink to this headline">¶</a></h2>
+<p>The following commands will help you generate your dbt docs, assuming there are no configuration issues with either your <code class="docutils literal notranslate"><span class="pre">.yml</span></code> file or <code class="docutils literal notranslate"><span class="pre">.md</span></code> file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt docs generate
+dbt docs serve
+</pre></div>
+</div>
+<blockquote>
+<div><p>Note: If you have a serve issue to a particular port, try adding the flag <code class="docutils literal notranslate"><span class="pre">--port</span> <span class="pre">####</span></code></p>
+</div></blockquote>
+<p><img alt="" src="https://media.giphy.com/media/thQgyMgrvfqq248QxX/giphy.gif" /></p>
+<p>From the above, we observe the overview &amp; metadata attributes are added to our datasets! Now individuals will be able to do some further data discovery into identifying what the purpose of both the tables and associated columns are!</p>
+</div>
+<div class="section" id="misc">
+<h2>1.5. Misc.<a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h2>
+<p>There are some additional items that could be added to our dbt docs, like having an overview section, and more!</p>
+<p>For more information about dbt docs, you can <a class="reference external" href="https://docs.getdbt.com/docs/building-a-dbt-project/documentation">find it here</a>.</p>
+<p>And again,</p>
+<blockquote>
+<div><p>“Documentation is a love letter to your future self” - Damian Conway</p>
+</div></blockquote>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "dbtcourse"
+        },
+        kernelOptions: {
+            kernelName: "dbtcourse",
+            path: "./5-Documentation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'dbtcourse'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../4-Model-Mart-Tables/index.html" title="previous page">1. What are the Facts?</a>
+    <a class='right-next' id="next-link" href="../6-Advanced-Tests/index.html" title="next page">1. Testing, Testing…</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raul Maldonado<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
