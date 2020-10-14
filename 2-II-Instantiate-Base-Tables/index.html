@@ -90,7 +90,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
+  <a class="reference internal" href="../README.html">
    Analytic Engineering &amp; dbt: 0-100
   </a>
  </li>
@@ -359,27 +359,26 @@
                 
   <div class="section" id="instantiate-your-base-tables">
 <h1>2. Instantiate your Base Tables!<a class="headerlink" href="#instantiate-your-base-tables" title="Permalink to this headline">¶</a></h1>
-<p>You can find an overview of this <a class="reference external" href="https://www.youtube.com/watch?v=c4I_yxypISk&amp;list=PL83V3nc76mDrEfz1rRZ3L2fDYXDGm8yLk&amp;index=5">section here</a>.</p>
 <div class="section" id="base-table-creation">
 <h2>2.1. Base Table Creation!<a class="headerlink" href="#base-table-creation" title="Permalink to this headline">¶</a></h2>
-<p><img alt="" src="https://media1.tenor.com/images/45ad3e4c2319bd9de6fba68cdfd2c0be/tenor.gif?itemid=5875421" /></p>
 <div class="section" id="folder-path">
 <h3>2.1.1. Folder Path<a class="headerlink" href="#folder-path" title="Permalink to this headline">¶</a></h3>
-<p>Now onto the fun stuff! We will now create our base tables for our <a class="reference external" href="https://github.com/CloudChaoszero/customer-analytics">customer analytics data model</a>.</p>
-<p>Assuming you have your source configuration setup, we proceed to create our base folder <code class="docutils literal notranslate"><span class="pre">Base</span></code> folder, seen below:</p>
+<p>Now onto the fun stuff! We will now create our base tables for our customer analytics data model.</p>
+<p>Assuming you have your source configuration setup, we proceed to create our base folder <code class="docutils literal notranslate"><span class="pre">base</span></code> folder, seen below:</p>
 <p><img alt="Base Table Directory" src="https://media.giphy.com/media/ez9MS4rP9WC0bAtXAF/giphy.gif" /></p>
 </div>
 <div class="section" id="developing-your-query">
 <h3>2.1.2. Developing your Query<a class="headerlink" href="#developing-your-query" title="Permalink to this headline">¶</a></h3>
-<p>Our first example is creating the base table <code class="docutils literal notranslate"><span class="pre">snowflake_demo_catalog_sales.sql</span></code>, <a class="reference external" href="https://github.com/CloudChaoszero/customer-analytics">referenced here</a>.</p>
-<p>Suprisingly, there is a naming convention for this table. The convention looks as such:</p>
+<p>Our first example is creating the base table <code class="docutils literal notranslate"><span class="pre">snowflake_demo_catalog_sales.sql</span></code>.</p>
+<p>Suprisingly, there is a naming convention for this table. The convention looks as such</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">{source}_{source_table_name}.sql</span></code></p></li>
 </ul>
 <blockquote>
 <div><p>Note: This is by no means an industry standard. That being said, there are different approaches to this methodology in teams or groups you follow.</p>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">snowflake_demo_catalog_sales.sql</span></code></p>
+<p>Our table will look as such:
+<code class="docutils literal notranslate"><span class="pre">snowflake_demo_catalog_sales.sql</span></code>.</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>SELECT * 
 FROM
     {{ source(&#39;customers&#39;, &#39;CATALOG_SALES&#39;)}}
@@ -394,20 +393,19 @@ LIMIT 10000 -- Limiting due to data limitation via Trial Account
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt run --models snowflake_demo_catalog_sales
 </pre></div>
 </div>
+<p>seen below</p>
 <p><img alt="Running a model" src="https://media.giphy.com/media/QQ1VL4EYXFWkLrJzGp/giphy.gif" /></p>
-<p><img alt="" src="https://i.pinimg.com/originals/fc/b8/bd/fcb8bd2b7cb3f0f81ab72b2b8634341c.gif" /></p>
 </div>
 </div>
 <div class="section" id="materialization-in-cloud-database">
 <h2>2.2. Materialization in (Cloud) Database<a class="headerlink" href="#materialization-in-cloud-database" title="Permalink to this headline">¶</a></h2>
 <p>So what happened?</p>
-<p>We had a successful run to create our view or table into our database. Congrats!</p>
+<p>We had a successful run to create our view or table into our database! Congrats</p>
 <p><img alt="Snowflake Base Table example" src="https://media.giphy.com/media/BARJD7FlCqKmv3Jy7Q/giphy.gif" /></p>
 <div class="section" id="how-did-i-get-a-schema-prefix">
 <h3>2.2.1. How did I get a Schema Prefix?<a class="headerlink" href="#how-did-i-get-a-schema-prefix" title="Permalink to this headline">¶</a></h3>
 <p>But you may ask, why is there a <code class="docutils literal notranslate"><span class="pre">DEV_{name}</span></code> as a prefix for the specified schema?</p>
-<p>Well, this is because our default <code class="docutils literal notranslate"><span class="pre">target</span></code> is set to <code class="docutils literal notranslate"><span class="pre">dev</span></code>, from our <code class="docutils literal notranslate"><span class="pre">profiles.yml</span></code> file.</p>
-<p>This file contains the specified schema prefix, seen in “schema”, below:</p>
+<p>Well, this is because our default <code class="docutils literal notranslate"><span class="pre">target</span></code> is set to <code class="docutils literal notranslate"><span class="pre">dev</span></code>, from our <code class="docutils literal notranslate"><span class="pre">profiles.yml</span></code> file. This file contains the specified schema prefix, seen in “schema”, below:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">customer-analytics-db</span><span class="p">:</span>
   <span class="nt">target</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dev</span>
   <span class="nt">outputs</span><span class="p">:</span>
@@ -431,21 +429,20 @@ LIMIT 10000 -- Limiting due to data limitation via Trial Account
 </div>
 <div class="section" id="aim-on-the-target">
 <h3>2.2.2. Aim on the Target<a class="headerlink" href="#aim-on-the-target" title="Permalink to this headline">¶</a></h3>
-<p>Okay, how can I change that to the production (prod) target version?</p>
-<p>You can do this by specifying your <a class="reference external" href="https://docs.getdbt.com/faqs/seed-custom-schemas/">target access</a> and materialization by this command.</p>
+<p>Okay, how can I change that to the prod version?</p>
+<p>You can do this by specifying your <a class="reference external" href="https://docs.getdbt.com/faqs/seed-custom-schemas/">target access</a> and materialization by this command, if you have another path set up</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt run --target prod --models snowflake_demo_catalog_sales
 </pre></div>
 </div>
-<p>Before, we implicitly called the following target, but it wasn’t shown because we didn’t present the <code class="docutils literal notranslate"><span class="pre">--target</span></code> FLAG</p>
+<p>Before, we implicitly called the following target, but it wasn’t shown b/c we didn’t present the <code class="docutils literal notranslate"><span class="pre">--target</span></code> FLAG</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbt run --target dev --models snowflake_demo_catalog_sales
 </pre></div>
 </div>
-<p><img alt="Aim" src="https://media.tenor.com/images/03e724c41457dee8b38c8970d8e4a2f9/tenor.gif" /></p>
 </div>
 </div>
 <div class="section" id="next-steps">
 <h2>2.3. Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
-<p>Next, we’ll be going over how to best develop your data mart</p>
+<p>Next, we’ll be going over how to best develop and now create a taxing cost on our Cloud database…and our billing :(</p>
 </div>
 </div>
 

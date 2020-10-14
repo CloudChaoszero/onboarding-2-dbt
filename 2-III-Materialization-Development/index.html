@@ -90,7 +90,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
+  <a class="reference internal" href="../README.html">
    Analytic Engineering &amp; dbt: 0-100
   </a>
  </li>
@@ -303,33 +303,28 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#base-tables-the-design">
-   3.1. Base Tables - The Design
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#base-tables-the-implementation">
-   3.2. Base Tables - The Implementation
+  <a class="reference internal nav-link" href="#base-tables">
+   3.1. Base Tables
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#explicitly-defining-data-types">
-     3.2.1. Explicitly Defining Data Types
+     3.1.1. Explicitly Defining Data Types
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-cleaning">
-     3.2.2. Data Cleaning
+     3.1.2. Data Cleaning
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#column-renaming-optional">
-     3.2.3. Column Renaming [Optional]
+     3.1.3. Column Renaming [Optional]
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#json-unpacking-snowflake-optional">
-     3.2.4. Json Unpacking [Snowflake, Optional]
+     3.1.4. Json Unpacking [Snowflake, Optional]
     </a>
    </li>
   </ul>
@@ -347,13 +342,11 @@
                 
   <div class="section" id="development-in-base">
 <h1>3. Development in BASE<a class="headerlink" href="#development-in-base" title="Permalink to this headline">¶</a></h1>
-<p>You can find a video overview of this <a class="reference external" href="https://www.youtube.com/watch?v=zhCmr3Wb7w4&amp;list=PL83V3nc76mDrEfz1rRZ3L2fDYXDGm8yLk&amp;index=6">section here</a>.</p>
-<div class="section" id="base-tables-the-design">
-<h2>3.1. Base Tables - The Design<a class="headerlink" href="#base-tables-the-design" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-tables">
+<h2>3.1. Base Tables<a class="headerlink" href="#base-tables" title="Permalink to this headline">¶</a></h2>
 <p>This section, I’ll be discussing some of the BASE layer implementations, in preparation of our data mart.</p>
 <p>However, what is a BASE layer?</p>
-<p>BASE layer is the intial landing area for our Data Warehours modeling procedure for our Data Nart. It’s the “raw” layer for ingesting data, in its own purity.</p>
-<p>For my own preferences and adoption of <a class="reference external" href="https://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimensional-modeling/">Kimball Methodology</a>, this layer includes the following implementations:</p>
+<p>BASE layer is the intial landing area for our Data Warehours modeling proecudure for our data mart. It’s the “raw” layer for ingesting data, in its own purity. For my own preferences and adoption of Kimball Methodology, this layer includes the following implementations</p>
 <ul class="simple">
 <li><p>Data Type (Explicity) Definitions</p></li>
 <li><p>Data Cleaning</p></li>
@@ -369,11 +362,8 @@ dbt run --models tag:customer_info
 <blockquote>
 <div><p>Tags are implemented in the raw_schema.yml file</p>
 </div></blockquote>
-</div>
-<div class="section" id="base-tables-the-implementation">
-<h2>3.2. Base Tables - The Implementation<a class="headerlink" href="#base-tables-the-implementation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="explicitly-defining-data-types">
-<h3>3.2.1. Explicitly Defining Data Types<a class="headerlink" href="#explicitly-defining-data-types" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.1. Explicitly Defining Data Types<a class="headerlink" href="#explicitly-defining-data-types" title="Permalink to this headline">¶</a></h3>
 <p>Depending how your first step of your ELT pipeline, Extraction process, you may have some displeasing storage inefficiencies that could affect either timing or costs in your data warehouse.</p>
 <p>For example, we use Python to push data through Snowflake custom API calls. This data push sends all field’s data types as <code class="docutils literal notranslate"><span class="pre">VARCHAR(XXXXXXXX)</span></code> in Snowflake.</p>
 <p>This can be detrimental in subsequent queries, transformations, or aggregations due to storage size allowed to the fields. With explicit data type conversions, we avoid these long term issues in our data warehouse.</p>
@@ -400,7 +390,7 @@ We’ll talk about that in a later section. :)</p>
 </div></blockquote>
 </div>
 <div class="section" id="data-cleaning">
-<h3>3.2.2. Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.2. Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h3>
 <p>There are some cases where your data comes in improperly. In the BASE layer, you’d want to proceed with some data cleaning operations such as:</p>
 <ul class="simple">
 <li><p>Removing HTML characters</p></li>
@@ -428,7 +418,7 @@ We’ll talk about that in a later section. :)</p>
 </ul>
 </div>
 <div class="section" id="column-renaming-optional">
-<h3>3.2.3. Column Renaming [Optional]<a class="headerlink" href="#column-renaming-optional" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.3. Column Renaming [Optional]<a class="headerlink" href="#column-renaming-optional" title="Permalink to this headline">¶</a></h3>
 <p>Imagine this, raw data landing into your data warehosue like this:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -474,7 +464,7 @@ We’ll talk about that in a later section. :)</p>
 </table>
 </div>
 <div class="section" id="json-unpacking-snowflake-optional">
-<h3>3.2.4. Json Unpacking [Snowflake, Optional]<a class="headerlink" href="#json-unpacking-snowflake-optional" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.4. Json Unpacking [Snowflake, Optional]<a class="headerlink" href="#json-unpacking-snowflake-optional" title="Permalink to this headline">¶</a></h3>
 <p>Optionally, Snowflake has a cool feature to unpack JSON objects to tabular formats</p>
 <blockquote>
 <div><p>This is not a sponsorship for Snowflake, just something really cool I use.
